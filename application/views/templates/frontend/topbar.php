@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-md navbar-inverse navbar-light  shadow-lg sticky-top bg-white rounded">
+    <nav class="navbar navbar-expand-md navbar-inverse navbar-light shadow-sm sticky-top bg-white rounded">
         <div class="container">
             <a class="navbar-brand" href"#" >
                 <img src="<?= base_url(); ?>vendor\img\logo.png" height="50">
@@ -10,16 +10,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive"
                 style="width: 100%; background-color:#FFFFFF; margin: 0 -20px;">
                 <ul class="navbar-nav ml-auto" style="font-size: 14px; padding: 6px;">
-                    <li class="nav-item  active">
-                        <a class="nav-link font-weight-500" href="#">BERANDA</a>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-500" href="<?= base_url(); ?>welcome">BERANDA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded js-scroll-trigger font-weight-500" href="#lowongan">LOWONGAN TERSEDIA</a>
+                        <a class="nav-link rounded js-scroll-trigger font-weight-500" href="<?= base_url(); ?>welcome#lowongan">LOWONGAN TERSEDIA</a>
                     </li>
                     <?php if($user['email']): ?>
                     <li class="nav-item">
                         <a class="nav-link font-weight-500"
-                            href="#">FORM KANDIDAT</a>
+                            href="<?= base_url('user'); ?>/formKandidat">FORM KANDIDAT</a>
                     </li>
                     <li class="nav-item">
                         <a href="#"
@@ -31,8 +31,8 @@
                         <div class="dropdown">
                             <a href="#" class="nav-link font-weight-500 dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $user['nama_lengkap']; ?></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="<?= base_url('user'); ?>">Profil</a>
+                                <a class="dropdown-item" href="<?= base_url('auth'); ?>/logout">Logout</a>
                             </div>
                         </div>
                     </li>

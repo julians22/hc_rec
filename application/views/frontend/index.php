@@ -1,4 +1,5 @@
 <div class="container-fluid">
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -23,7 +24,7 @@
 </div>
 
 <div class="container mt-3 mb-5">
-    <h4 class="text-center mt-n5">Lowongan Tersedia</h4>
+    <h4 class="text-center">Lowongan Tersedia</h4>
     <hr>
     <div data-accordion-group id="lowongan">
         <div class="accordion" data-accordion>
