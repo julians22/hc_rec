@@ -138,8 +138,8 @@ class Auth extends CI_Controller {
 			'charset'       => 'utf-8',
 			'protocol' 		=> 'smtp',
 			'smtp_host'		=> 'ssl://smtp.googlemail.com',
-			'smtp_user'		=> 'deanabne2212@bsi.ac.id',
-            'smtp_pass'		=> 'dajulian22',
+			// 'smtp_user'		=> 'masukkan email smtp',
+            // 'smtp_pass'		=> 'masukkan password email smtp',
 			'smtp_timeout' 	=> '8',
             'smtp_port'		=> 465,
             'newline'		=> "\r\n"
@@ -148,7 +148,7 @@ class Auth extends CI_Controller {
         $this->load->library('email');
         $this->email->initialize($config);
         
-        $this->email->from('deanabne2212@bsi.ac.id', 'Dean Abner Julian');
+        $this->email->from('example@email.com', 'noreply');
         $this->email->to($this->input->post('email'));
         if ($type == 'verify') {
             $this->email->subject('Verifikasi Email');
